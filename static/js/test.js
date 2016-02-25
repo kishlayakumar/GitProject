@@ -1,5 +1,9 @@
 
 function myFunction() {
+  //Various Things in this function
+  //This get User link from textbox
+  // and extract username
+  //and repo and send a get request.
   var txtName = document.getElementById("gitadderstext");
   var link = txtName.value;
   var linkdata = link.split("/");
@@ -16,12 +20,12 @@ function myFunction() {
          cache: false,
 
          success : function(html){
-             //$(".content").html(html);
+
              json = html;
 
              $('#loading-img').hide(); // hide the loading message
-             $('#box-element').hide();
-             var obj = JSON.parse(json);
+             $('#box-element').hide();//hide text box screen
+             var obj = JSON.parse(json);//Parse object recive as json object
                var val = obj["Total Issue"];
                jsobj = "Total open issues : "
                $('#box-element2').append(jsobj);
@@ -50,6 +54,7 @@ function myFunction() {
                $('#box-element2').show();
          },
          error: function (jqXHR, exception) {
+             //For error and exception handling
              var msg = '';
              if (jqXHR.status === 0) {
                  msg = 'Not connect.\n Verify Network.';
@@ -80,32 +85,11 @@ function myFunction() {
 
 
 function myFunction2() {
-
+  // on click this function reload the given URL
   window.location.href = document.URL;
 }
 
 
-/*
-  var xhr = new XMLHttpRequest();
-  //console.log(document.URL);
-  xhr.open("GET", document.URL + "get/" + username + "/" + reponame, false);
-  xhr.send();
-  //document.getElementById("gitadderstext").style.display="none";
-  //document.getElementById("button-click").style.display="none";
-  //document.getElementById("box-element").style.display="none";
-  //document.getElementById("loading-img").style.display="block";
-  console.log("hello")
-  console.log(xhr.status);
-  console.log(xhr.responseText);
-
-  console.log(xhr.readyState == 4)
-  console.log(xhr.onreadystatechange)
-
-
-  // console.log(xhr.responseText)
-}
-
-*/
 $(window).load(function() {
   // Animate loader off screen
   $(".se-pre-con").fadeOut("slow");;

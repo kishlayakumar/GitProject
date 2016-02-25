@@ -1,0 +1,50 @@
+heroku link: https://flask-git-test-app.herokuapp.com/
+My solution:
+  As per Question My output would be:
+  - Total number of open issues
+  - Number of open issues that were opened in the last 24 hours
+  - Number of open issues that were opened more than 24 hours ago but less than 7 days ago
+  - Number of open issues that were opened more than 7 days ago.
+  its a easy one when you know about git hub api's
+  there are several methods to do with various languange
+  i choose python so as flask because i wroked with them.
+  so, for backend i wrote a code in python which 
+  - get usernameand repository name of the user and send a get request to 
+    api.github.com with username and repo name. 
+  - git hub sends you the details within a json object. 
+    which also contains Total open issuesand a link to that 
+    repo's issues page. 
+  - After getting issue link i iterate over all the pages and 
+    issue and look for there date. 
+  - Extracted date of every issue compared that date with current time
+    an das per requirement i stored count of the issues that were opened in the last 24 hours,
+    issues that were opened more than 24 hours ago but less than 7 days ago,
+    open issues that were opened more than 7 days ago, number of open issues in three diffrent
+    variables relatively.
+  - store the varriables in A dictonary . because dictionary are easy to change in json 
+    for fronted and return to the API call.
+  And for fronted,
+  - i design a simple HTML page which input is git link
+  - after provide a link and clicking button
+  - Link is get by java script where user name and repository name 
+    are extracted from link
+  - after thatthrough ajax a get request is send to back end
+  - and after data is get it is displayed on screen
+
+How i improve my solution?
+  -There are many ways which i can improve. Frankly i dont know much about JS and heroku so it took me more time. 
+   also did this after office hours so a little late
+  -Given more time i design fronted more good
+  - I used Flask as web server. I would rather use NodeJs.
+  - and there are various things you could do with GIT apis
+    - Top latest issues for each issue's tab  of link 24hrs, & 7days etc
+    - I will get data on dashboard which has which user has more issues
+    - Follower of that Issue
+    - assignee of that issues with link to his avatar
+    - Total number of watcher, follower etc in seprate box for each issue
+    - There are various more you can do if you are on admin side.
+      -like checking and notifing issuer and asignee that this much time is lapsed
+       for your issue
+      - Send mail.
+      - Create a dashbord of own where you can set priority of issue
+      - etc 
