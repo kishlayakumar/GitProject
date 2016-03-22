@@ -24,10 +24,10 @@ body {
   text-align: center;
 }
 .id-area {
-    height: 140px;
+    height: 170px;
     position: relative;
 
-    width: 274px;
+    width: 300px;
     padding: 40px 40px;
 }
 .gitadders {
@@ -76,7 +76,7 @@ div {
   font-size: 18px;
 }
 .id-area2 {
-    height: 120px;
+    height: 150px;
     position: relative;
 
     width: 360px;

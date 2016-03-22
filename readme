@@ -32,10 +32,8 @@ My solution:
   - and after data is get it is displayed on screen
 
 How i improve my solution?
-  -There are many ways which i can improve. Frankly i dont know much about JS and heroku so it took me more time. 
-   also did this after office hours so a little late
-  -Given more time i design fronted more good
-  - I used Flask as web server. I would rather use NodeJs.
+  -There are many ways which i can improve. 
+  - Future use for NodeJs.
   - and there are various things you could do with GIT apis
     - Top latest issues for each issue's tab  of link 24hrs, & 7days etc
     - I will get data on dashboard which has which user has more issues
