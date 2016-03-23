@@ -1,6 +1,6 @@
 heroku link: https://flask-git-test-app.herokuapp.com/
-My solution:
-  As per Question My output would be:
+Enter your Git Repository Link and,
+  My output would be:
   - Total number of open issues
   - Number of open issues that were opened in the last 24 hours
   - Number of open issues that were opened more than 24 hours ago but less than 7 days ago
@@ -28,7 +28,7 @@ My solution:
   - after provide a link and clicking button
   - Link is get by java script where user name and repository name 
     are extracted from link
-  - after thatthrough ajax a get request is send to back end
+  - after that, through ajax a get request is send to back end
   - and after data is get it is displayed on screen
 
 How i improve my solution?
